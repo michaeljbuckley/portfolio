@@ -1,0 +1,59 @@
+{#
+/**
+ * @file
+ * Portfolio page shell: header band, nav, main column, footer.
+ */
+#}
+<div class="layout-container">
+
+  <header class="site-header" role="banner">
+    <div class="site-header__inner">
+      <div class="site-branding">
+        {{ page.header }}
+      </div>
+      <nav class="site-nav" aria-label="Primary">
+        {{ page.primary_menu }}
+      </nav>
+    </div>
+  </header>
+
+  {% if page.highlighted %}
+    <div class="site-highlighted">
+      {{ page.highlighted }}
+    </div>
+  {% endif %}
+
+  {% if page.help %}
+    <div class="site-help">
+      {{ page.help }}
+    </div>
+  {% endif %}
+
+  {% if page.breadcrumb %}
+    <div class="site-breadcrumb">
+      {{ page.breadcrumb }}
+    </div>
+  {% endif %}
+
+  <main class="site-main" role="main">
+    <a id="main-content" tabindex="-1"></a>
+    <div class="site-main__content">
+      {{ page.content }}
+    </div>
+  </main>
+
+  {% if page.footer %}
+    <footer class="site-footer" role="contentinfo">
+      <div class="site-footer__inner">
+        {{ page.footer }}
+      </div>
+    </footer>
+  {% else %}
+    <footer class="site-footer" role="contentinfo">
+      <div class="site-footer__inner">
+        <p class="site-footer__note">Design case studies · local lab</p>
+      </div>
+    </footer>
+  {% endif %}
+
+</div>

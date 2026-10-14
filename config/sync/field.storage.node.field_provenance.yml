@@ -1,0 +1,27 @@
+uuid: ca366744-3331-401a-9212-9170291cc21a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_provenance
+field_name: field_provenance
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: historical
+      label: Historical
+    -
+      value: speculative
+      label: Speculative
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

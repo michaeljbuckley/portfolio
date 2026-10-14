@@ -1,0 +1,25 @@
+uuid: ae3f8772-36c4-49b0-973f-dea2814fbf14
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_medium
+    - node.type.case_study
+    - taxonomy.vocabulary.medium
+id: node.case_study.field_medium
+field_name: field_medium
+entity_type: node
+bundle: case_study
+label: Medium
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      medium: medium
+    auto_create: false
+field_type: entity_reference

@@ -1,0 +1,22 @@
+name: portfolio
+type: theme
+'base theme': stable9
+version: 1.0.0
+libraries:
+  - portfolio/base
+  - portfolio/messages
+  - core/normalize
+libraries-extend:
+  user/drupal.user:
+    - portfolio/user
+  core/drupal.dropbutton:
+    - portfolio/dropbutton
+  core/drupal.dialog:
+    - portfolio/dialog
+  file/drupal.file:
+    - portfolio/file
+  core/drupal.progress:
+    - portfolio/progress
+description: ''
+core_version_requirement: ^10
+generator: 'starterkit_theme:10.6.16'

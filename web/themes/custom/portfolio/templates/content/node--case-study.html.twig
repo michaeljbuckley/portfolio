@@ -1,0 +1,61 @@
+{#
+/**
+ * @file
+ * Case study node: role, era, constraints, process, outcome, images.
+ */
+#}
+<article{{ attributes.addClass('case-study', 'node', 'node--type-case-study', 'node--view-mode-' ~ view_mode|clean_class) }}>
+
+  {{ title_prefix }}
+  {% if label and not page %}
+    <h2{{ title_attributes.addClass('case-study__title') }}>
+      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+    </h2>
+  {% elseif label and page %}
+    <h1{{ title_attributes.addClass('case-study__title') }}>{{ label }}</h1>
+  {% endif %}
+  {{ title_suffix }}
+
+  <div class="case-study__meta">
+    {{ content.field_role }}
+    {{ content.field_year_era }}
+    {{ content.field_provenance }}
+    {{ content.field_medium }}
+  </div>
+
+  {{ content.field_cover_image }}
+
+  {% if content.field_constraints|render|striptags|trim %}
+    <section class="case-study__section case-study__constraints">
+      {{ content.field_constraints }}
+    </section>
+  {% endif %}
+
+  {% if content.body|render|striptags|trim %}
+    <section class="case-study__section case-study__process">
+      {{ content.body }}
+    </section>
+  {% endif %}
+
+  {% if content.field_outcome|render|striptags|trim %}
+    <section class="case-study__section case-study__outcome">
+      {{ content.field_outcome }}
+    </section>
+  {% endif %}
+
+  {{ content.field_gallery }}
+
+  {{ content|without(
+    'field_role',
+    'field_year_era',
+    'field_provenance',
+    'field_medium',
+    'field_cover_image',
+    'field_constraints',
+    'body',
+    'field_outcome',
+    'field_gallery',
+    'links'
+  ) }}
+
+</article>

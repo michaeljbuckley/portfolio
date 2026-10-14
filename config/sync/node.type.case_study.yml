@@ -1,0 +1,11 @@
+uuid: 4192c370-4b59-41b2-a94f-833dc60e912a
+langcode: en
+status: true
+dependencies: {  }
+name: 'Case Study'
+type: case_study
+description: 'Portfolio case study'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

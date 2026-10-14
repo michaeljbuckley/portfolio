@@ -1,0 +1,24 @@
+uuid: b58f3982-c5ab-41a4-b99a-b6c99aafd67d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_gallery
+    - media.type.image
+    - node.type.case_study
+id: node.case_study.field_gallery
+field_name: field_gallery
+entity_type: node
+bundle: case_study
+label: Gallery
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+field_type: entity_reference

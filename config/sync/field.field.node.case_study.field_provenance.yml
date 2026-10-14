@@ -1,0 +1,23 @@
+uuid: f451141d-4fca-47ae-b43f-15f81f0ef920
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_provenance
+    - node.type.case_study
+  module:
+    - options
+id: node.case_study.field_provenance
+field_name: field_provenance
+entity_type: node
+bundle: case_study
+label: Provenance
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: historical
+default_value_callback: ''
+settings: {  }
+field_type: list_string

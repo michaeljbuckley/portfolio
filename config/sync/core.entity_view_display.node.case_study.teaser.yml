@@ -1,0 +1,64 @@
+uuid: 1e62b048-b363-4c35-9a12-d6709870c03c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.case_study.body
+    - field.field.node.case_study.field_constraints
+    - field.field.node.case_study.field_cover_image
+    - field.field.node.case_study.field_gallery
+    - field.field.node.case_study.field_medium
+    - field.field.node.case_study.field_outcome
+    - field.field.node.case_study.field_provenance
+    - field.field.node.case_study.field_role
+    - field.field.node.case_study.field_year_era
+    - node.type.case_study
+  module:
+    - text
+    - user
+id: node.case_study.teaser
+targetEntityType: node
+bundle: case_study
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 200
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_cover_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_role:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_year_era:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  field_constraints: true
+  field_gallery: true
+  field_medium: true
+  field_outcome: true
+  field_provenance: true
+  links: true

@@ -1,0 +1,75 @@
+# Drupal Composer project — secrets and generated paths out of git
+
+# OS / editor
+.DS_Store
+*~
+*.swp
+.idea/
+.vscode/
+
+# DDEV local (optional to commit; keep private machine paths out)
+.ddev/.homeadditions
+.ddev/xhprof
+.ddev/mutagen
+.ddev/traefik
+.ddev/.dbimageBuild
+.ddev/.webimageBuild
+.ddev/.ddev-docker-compose-*.yaml
+.ddev/db_snapshots
+.ddev/import-db
+.ddev/import-files
+
+# Composer
+/vendor/
+composer.phar
+
+# Drupal core & contrib (installed via composer)
+/web/core/
+/web/modules/contrib/
+/web/themes/contrib/
+/web/profiles/contrib/
+/web/libraries/
+
+# Scaffold noise under web/
+/web/autoload.php
+/web/index.php
+/web/update.php
+/web/robots.txt
+/web/.csslintrc
+/web/.eslintignore
+/web/.eslintrc.json
+/web/.ht.router.php
+/web/INSTALL.txt
+/web/README.md
+/web/web.config
+/web/sites/default/default.services.yml
+/web/sites/default/default.settings.php
+/web/sites/example.*
+/web/sites/development.services.yml
+/web/sites/README.txt
+/web/modules/README.txt
+/web/profiles/README.txt
+/web/themes/README.txt
+
+# Secrets & environment-specific settings
+/web/sites/*/settings.local.php
+/web/sites/*/settings.ddev.php
+/web/sites/*/settings.ddev.*.php
+/web/sites/*/services.local.yml
+
+# Keep settings.php (safe defaults only) — do not put DB passwords there
+# Host-specific overrides go in settings.local.php (ignored)
+
+# User files & private storage
+/web/sites/*/files/
+/web/sites/*/private/
+/web/sites/*/tmp/
+/web/sites/*/translations/
+/web/sites/*/cache/
+
+# PHPUnit / node (if added later)
+/web/sites/simpletest/
+node_modules/
+/phpunit.xml
+/.phpunit.result.cache
+page.html.twig.bak

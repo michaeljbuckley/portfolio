@@ -1,0 +1,9 @@
+uuid: 2f1e921d-2904-4ccd-817f-f74163453467
+langcode: en
+status: true
+dependencies: {  }
+name: Medium
+vid: medium
+description: 'print / digital / licensed'
+weight: 0
+new_revision: false
